@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TodoItems from "./TodoItems";
 
 const Todo = () => {
   const [todo, setTodo] = useState(""); // this is only for the input values to have the dynamic//
@@ -20,7 +21,9 @@ const Todo = () => {
         />
         <button type="submit">Add</button>
       </form>
-      {console.log(todos)}
+      {todos.map((item) => (
+        <TodoItems key={item} item={item} />
+      ))}
     </div>
   );
 };
