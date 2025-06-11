@@ -1,4 +1,4 @@
-const TodoItems = ({item}) => {
+const TodoItems = ({ item }) => {
   return <h3>{item}</h3>;
 };
 
