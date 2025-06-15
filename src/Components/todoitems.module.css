@@ -13,5 +13,16 @@ padding: 20px;
 .line{
     color: rgb(129, 155, 147);
     border:1px solid;
+}
 
+
+.deleteButton{
+float: right;
+padding: 12px 20px;
+border: none;
+background-color:rgb(129, 155, 147) ;
+border-radius: 4px;
+color: white;
+margin-top: -5px;
+cursor: pointer;
 }
