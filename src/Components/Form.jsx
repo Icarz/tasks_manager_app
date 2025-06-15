@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "./form.module.css";
 const Form = ({ todos, setTodos }) => {
-  const [todo, setTodo] = useState("");
+  const [todo, setTodo] = useState({ name: "", done: false });
 
   function handleSubmit(e) {
     e.preventDefault(); // this to prevent the refreshing for the page when we click on the button//
     setTodos([...todos, todo]); // the spread operator keeps the pervious values in the array//
-    setTodo("");
+    setTodo({ name: "", done: false });
   }
   return (
     <div>
@@ -14,10 +14,10 @@ const Form = ({ todos, setTodos }) => {
         <div className={styles.fromContainer}>
           <input
             className={styles.modernInput}
-            value={todo}
+            value={todo.name}
             type="text"
             placeholder="your tasks here ..."
-            onChange={(e) => setTodo(e.target.value)}
+            onChange={(e) => setTodo({ name: e.target.value, done: false })}
           />
           <button className={styles.modernButton} type="submit">
             Add
